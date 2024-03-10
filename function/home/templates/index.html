@@ -1,0 +1,26 @@
+<!-- warranty_template.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Text</title>
+</head>
+<body>
+    {% if status %}
+    <h1>Warranty Details</h1>
+    <p>Order ID: {{ warranty_data.order_id }}</p>
+    <p>Order Date: {{ warranty_data.order_date }}</p>
+    <p>Client Name: {{ warranty_data.client_name }}</p>
+    <p>Patient Name: {{ warranty_data.patient_name }}</p>
+    <p>Product Name: {{ warranty_data.product_name }}</p>
+    <p>Unit: {{ warranty_data.unit }}</p>
+    <p>Warranty: {{ warranty_data.warranty }}</p>
+    <p>Valid Upto: {{ warranty_data.valid_upto }}</p>
+{% else %}
+    <p>Warranty details not found.</p>
+{% endif %}
+    
+</body>
+</html>
+
